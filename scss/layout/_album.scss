@@ -1,8 +1,11 @@
 @use "../utilities/variables" as *;
 @use "../utilities/extend" as *;
 @use "../utilities/mixins" as *;
-// FALTAN VISTA MOBILE - TABLET ()
+// FALTAN VISTA - TABLET ()
 
+/* ============================= */
+/* ALBUM - MOBILE */
+/* ============================= */
 .textoMainAlbum{
     display: none;
 }
@@ -21,7 +24,34 @@
             width: 100%;
             padding: 1.25rem;
             border-radius: 8px;
-            box-shadow: 10px 4px 12px rgba(0, 0, 0, 0.25);
+            box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.25);
+        }
+    }
+}
+
+/* ============================= */
+/* CONTACTO - TABLET */
+/* ============================= */
+@include tablet {
+
+    .destacadaAlbum {
+        gap: 2rem;
+
+        div {
+            display: flex;
+            flex-direction: row;
+            gap: 1.5rem;
+
+            article {
+                flex: 1;
+                min-width: 0;
+
+                transition: box-shadow 0.3s ease;
+
+                &:hover {
+                    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.4);
+                }
+            }
         }
     }
 }
